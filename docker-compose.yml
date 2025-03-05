@@ -1,4 +1,4 @@
-name: ursim-suite
+name: ur-simulation-suite
 services:
   ursim-service:
     container_name: ursim-container
