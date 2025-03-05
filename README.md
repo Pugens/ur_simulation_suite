@@ -1,11 +1,27 @@
-# Ursim suite of tools
+<!-- omit from toc -->
+# Simulation suite for the UR robot family
+
+<!-- omit from toc -->
+###### THE OFFICIAL SAM XL COLLECTION OF TOOLS TO SIMULATE AND CONTROL UR ROBOTS OFF-LINE
+
+<!-- omit from toc -->
+##### Table of content
+
+- [Introduction](#introduction)
+- [Usage](#usage)
+- [Other references](#other-references)
+- [RoboDK GUI and API for off-line programming](#robodk-gui-and-api-for-off-line-programming)
+- [MoveIt2 for motion planning](#moveit2-for-motion-planning)
+- [References](#references)
+
+## Introduction
 
 Here are few examples of all the possible uses of ursim, the official UR robos controller simulator [[win](https://www.universal-robots.com/download/software-ur20ur30/simulator-non-linux/offline-simulator-e-series-and-ur20ur30-ur-sim-for-non-linux-5161/)],[[linux](https://www.universal-robots.com/download/software-ur20ur30/simulator-linux/offline-simulator-e-series-and-ur20ur30-ur-sim-for-linux-5161/)].
-
 
 Docker compose is used for the setup, pulling the official images from Universal Robots and RoboDK. If you intend to use on your real robot, please make sure you use the correct [official ursim tag](https://hub.docker.com/r/universalrobots/ursim_e-series/tags) corresponding to you phisical controller Polyscope version. 
 
 ## Usage
+
 Please change the `.env` file to match you setup parameters:
 
 | Parameter              | Description                                                     |
@@ -20,6 +36,7 @@ TODO
 More info here: https://docs.ros.org/en/ros2_packages/rolling/api/ur_robot_driver/user_docs/installation/install_urcap_e_series.html#install-urcap-e-series
 
 ## Other references
+
 TODO
 | Port       | Function                                                           |
 | ---------- | ------------------------------------------------------------------ |
@@ -31,7 +48,13 @@ TODO
 | `-p 30003` | Allows access to Universal Robots real-time interface port.        |
 | `-p 30004` | Allows access to Universal Robots RTDE interface port.             |
 
-RoboDK image for off-line programming:
+## RoboDK GUI and API for off-line programming
 TODO
 
-[Setup URSim with Docker](https://docs.ros.org/en/ros2_packages/rolling/api/ur_robot_driver/installation/ursim_docker.html#external-control)
+## MoveIt2 for motion planning
+TODO
+
+## References
+
+- [Setup URSim with Docker](https://docs.ros.org/en/rolling/p/ur_client_library/doc/setup/ursim_docker.html)
+- TODO
