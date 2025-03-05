@@ -1,5 +1,7 @@
-# ignore any file called .old#
+# ignore any file with these extensions:
 **.old**
 **.bak**
-**.txt**
 **.urp**
+**.UR**
+**.installation**
+**.variables**
