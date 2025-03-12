@@ -73,6 +73,8 @@ Docker is a tool that makes it easier to create and run applications using conta
 
 Docker requires default selected method to virtualise the robot controller in this repository, and all the files needed to make it work are provided.
 
+Select one of the following paragraphs based on you own host machine.
+
 #### Install Docker on Windows
 - Open a command line terminal on windows as  admin (search for `cmd` ):
 - Enable windows subsystems for linux (WSL):
@@ -81,9 +83,12 @@ Docker requires default selected method to virtualise the robot controller in th
 - Make sure that WSL version 2 is installed correctly:
 `wsl --version` should be 2.x. 
   - If not, make sure to run `wsl --update`
-- Set your wsl to a 
-
-[Link to official install instructions.](https://docs.docker.com/desktop/setup/install/windows-install/)
+- Install Docker desktop: [link to official install instructions.](https://docs.docker.com/desktop/setup/install/windows-install/)
+- Restart your computer
+- Run the Computer Management as an admin and go to "Local Users and Groups."
+- From there, go to "Groups" and then go to "docker-users."
+- Right-click to add the user into the group.
+- Restart your computer for the changes to take place.
 
 #### Install Docker on macOS
 [Link to official install instructions.](https://docs.docker.com/desktop/setup/install/mac-install/)
@@ -99,8 +104,10 @@ https://robodk.com/download
 If you installed the virtual UR controller using the virtual machine method, please follow the official RoboDK instructions here:
 https://robodk.com/doc/en/Robots-Universal-Robots-URSim-Installation-guide.html
 
-
 ## Move and program the ursim virtual controller
+
+Independently of which installation method you used, we will be here showing some basics user instructions and programming steps for the UR16
+You can now try out 
 
 ## Move and program the RoboDK virtual twin
 
