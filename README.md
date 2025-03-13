@@ -69,6 +69,7 @@ After this step, move to the [RoboDK installation](#robodk-installation) paragra
 
 
 ### Docker method
+
 Docker is a tool that makes it easier to create and run applications using containers. Containers allow developers to package up an application with all the parts it needs, such as a virtual OS, libraries and other dependencies, all running within a reproducible virtual running executable.
 
 Docker requires default selected method to virtualise the robot controller in this repository, and all the files needed to make it work are provided.
@@ -76,12 +77,13 @@ Docker requires default selected method to virtualise the robot controller in th
 Select one of the following paragraphs based on you own host machine.
 
 #### Install Docker on Windows
-- Open a command line terminal on windows as  admin (search for `cmd` ):
+
+- Open a command line terminal on windows as  admin (search for `cmd`):
 - Enable windows subsystems for linux (WSL):
 `wsl --install`
 - Restart the computer
 - Make sure that WSL version 2 is installed correctly:
-`wsl --version` should be 2.x. 
+`wsl --version` should be 2.x.
   - If not, make sure to run `wsl --update`
 - Install Docker desktop: [link to official install instructions.](https://docs.docker.com/desktop/setup/install/windows-install/)
 - Restart your computer
@@ -91,9 +93,11 @@ Select one of the following paragraphs based on you own host machine.
 - Restart your computer for the changes to take place.
 
 #### Install Docker on macOS
+
 [Link to official install instructions.](https://docs.docker.com/desktop/setup/install/mac-install/)
 
 #### Install Docker on Linux
+
 Please select your distribution from the list on the [official install instructions](https://docs.docker.com/engine/install/) and proceed.
 
 ### RoboDK installation
