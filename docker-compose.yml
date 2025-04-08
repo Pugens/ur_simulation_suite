@@ -1,14 +1,22 @@
 name: ur-simulation-suite
 services:
   ursim-service:
-    env_file: ursim.env
+    env_file:
+      - robot_1.env
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: dockerfile
+      args:
+        POLYSCOPE:
+        ROBOT_MODEL:
+        TIMEZONE:
     image: ursim:lastest
     container_name: ursim-container
-    # volumes:
-    #   - ../programs:/ursim/programs
+    restart: always
+    tty: true
+    privileged: true
+    volumes:
+      - ../programs:/ursim/programs
     ports:
       - 29999:29999
       - 6080:6080
