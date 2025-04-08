@@ -2,7 +2,7 @@
 # Simulation suite for the UR robot family
 
 <!-- omit from toc -->
-###### SAM XL COLLECTION OF TOOLS TO SIMULATE AND CONTROL UR ROBOTS VIRTUAL TWINS OFF-LINE
+###### The official SAM XL collection of tools to simulate and control UR robots off-line
 
 <!-- omit from toc -->
 ##### Table of content
