@@ -1,8 +1,6 @@
 name: ur-simulation-suite
 services:
   ursim-service:
-    env_file:
-      - robot_1.env
     build:
       context: .
       dockerfile: dockerfile
