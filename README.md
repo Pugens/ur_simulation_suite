@@ -14,6 +14,7 @@
     - [Install Docker on Windows](#install-docker-on-windows)
     - [Install Docker on macOS](#install-docker-on-macos)
     - [Install Docker on Linux](#install-docker-on-linux)
+    - [Launch scripts](#launch-scripts)
   - [RoboDK installation](#robodk-installation)
 - [Move and program the ursim virtual controller](#move-and-program-the-ursim-virtual-controller)
 - [Move and program the RoboDK virtual twin](#move-and-program-the-robodk-virtual-twin)
@@ -100,6 +101,29 @@ Select one of the following paragraphs based on you own host machine.
 
 Please select your distribution from the list on the [official install instructions](https://docs.docker.com/engine/install/) and proceed.
 
+#### Launch scripts
+
+After Docker is installed, use the helper scripts in the `scripts/` folder.
+
+These scripts automatically:
+- Download `externalcontrol-1.0.5.urcap` (if missing).
+- Mirror it to `externalcontrol-1.0.5.jar` in `urcaps/`.
+- Start URSim with the correct mounts.
+
+Windows:
+- Compose workflow (recommended): `scripts\launch_compose.bat`
+- Direct `docker run` workflow: `scripts\launch_docker.bat`
+
+Linux/macOS:
+- Make scripts executable once: `chmod +x scripts/*.sh`
+- Compose workflow (recommended): `./scripts/launch_compose.sh`
+- Direct `docker run` workflow: `./scripts/launch_docker.sh`
+
+Notes:
+- The image tag is taken from `POLYSCOPE` in `.env`.
+- `ROBOT_MODEL` and `TIMEZONE` are also loaded from `.env`.
+- If URCap changes are not visible immediately in Polyscope, restart the URSim container/controller.
+
 ### RoboDK installation
 
 Please, install RoboDK on your machine from this link:
@@ -131,8 +155,7 @@ Please change the `.env` file to match you setup parameters:
 | `TZ=Europe/Copenhagen` | Timezone to use. Defaults to Europe/Copenhagen.                 |
 
 To use with official [ROS drivers](https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver), the official [URCap external-control plugin](https://github.com/UniversalRobots/Universal_Robots_ExternalControl_URCap) needs to be installed while building the image.
-TODO
-**Currently not working, the file sha is corrupted or something?**
+In this repository, installation is automated by the launch scripts, which download the URCap release asset and create the matching `.jar` file in `urcaps/` before startup.
 More info here: https://docs.ros.org/en/ros2_packages/rolling/api/ur_robot_driver/user_docs/installation/install_urcap_e_series.html#install-urcap-e-series
 
 
