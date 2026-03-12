@@ -124,6 +124,16 @@ Notes:
 - `ROBOT_MODEL` and `TIMEZONE` are also loaded from `.env`.
 - If URCap changes are not visible immediately in Polyscope, restart the URSim container/controller.
 
+##### Windows networking note (Docker Desktop)
+
+When using Docker Desktop on Windows, the container static IP (for example `192.168.56.101`) is typically reachable only from other containers on the same Docker network.
+
+For host applications such as RoboDK, connect using one of these instead:
+- `127.0.0.1:50002` (same machine)
+- `<Windows-host-LAN-IP>:50002` (another machine in your network)
+
+The published ports in `docker-compose.yml` are the stable entry point from outside Docker.
+
 ### RoboDK installation
 
 Please, install RoboDK on your machine from this link:

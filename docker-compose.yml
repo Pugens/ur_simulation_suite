@@ -18,6 +18,20 @@ services:
       - 30004:30004
       - 30002:30002
       - 50002:50002
+    networks:
+      ursim_net:
+        ipv4_address: 192.168.56.101
     # robodk-service:
     #   container_name: robodk-container
     #   image: robodk/robodk
+    # ros2-service:
+    #   container_name: ros2-container
+    #   image: ros2/ros2
+
+networks:
+  ursim_net:
+    name: ursim_net
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.56.0/24
