@@ -9,8 +9,8 @@ services:
     tty: true
     privileged: true
     volumes:
-      - ./urcaps:/urcaps
-      - ./programs:/ursim/programs
+      - ../urcaps:/urcaps
+      - ../programs:/ursim/programs
     ports:
       - 29999:29999
       - 6080:6080

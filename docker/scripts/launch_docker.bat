@@ -1,7 +1,7 @@
 @echo off
 setlocal
 
-set "ROOT_DIR=%~dp0.."
+set "ROOT_DIR=%~dp0..\.."
 for %%I in ("%ROOT_DIR%") do set "ROOT_DIR=%%~fI"
 
 set "URCAPS_DIR=%ROOT_DIR%\urcaps"

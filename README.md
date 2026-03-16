@@ -103,7 +103,7 @@ Please select your distribution from the list on the [official install instructi
 
 #### Launch scripts
 
-After Docker is installed, use the helper scripts in the `scripts/` folder.
+After Docker is installed, use the helper scripts in the `docker/scripts/` folder.
 
 These scripts automatically:
 - Download `externalcontrol-1.0.5.urcap` (if missing).
@@ -111,17 +111,17 @@ These scripts automatically:
 - Start URSim with the correct mounts.
 
 Windows:
-- Compose workflow (recommended): `scripts\launch_compose.bat`
-- Direct `docker run` workflow: `scripts\launch_docker.bat`
+- Compose workflow (recommended): `docker\scripts\launch_compose.bat`
+- Direct `docker run` workflow: `docker\scripts\launch_docker.bat`
 
 Linux/macOS:
-- Make scripts executable once: `chmod +x scripts/*.sh`
-- Compose workflow (recommended): `./scripts/launch_compose.sh`
-- Direct `docker run` workflow: `./scripts/launch_docker.sh`
+- Make scripts executable once: `chmod +x docker/scripts/*.sh`
+- Compose workflow (recommended): `./docker/scripts/launch_compose.sh`
+- Direct `docker run` workflow: `./docker/scripts/launch_docker.sh`
 
 Notes:
-- The image tag is taken from `POLYSCOPE` in `.env`.
-- `ROBOT_MODEL` and `TIMEZONE` are also loaded from `.env`.
+- The image tag is taken from `POLYSCOPE` in `docker/.env`.
+- `ROBOT_MODEL` and `TIMEZONE` are also loaded from `docker/.env`.
 - If URCap changes are not visible immediately in Polyscope, restart the URSim container/controller.
 
 ##### Windows networking note (Docker Desktop)
@@ -132,7 +132,7 @@ For host applications such as RoboDK, connect using one of these instead:
 - `127.0.0.1:50002` (same machine)
 - `<Windows-host-LAN-IP>:50002` (another machine in your network)
 
-The published ports in `docker-compose.yml` are the stable entry point from outside Docker.
+The published ports in `docker/docker-compose.yml` are the stable entry point from outside Docker.
 
 ### RoboDK installation
 
@@ -156,7 +156,7 @@ You can now try out
 
 If you intend to use on your real robot, please make sure you use the correct [official ursim tag](https://hub.docker.com/r/universalrobots/ursim_e-series/tags) corresponding to you phisical controller Polyscope version. 
 
-Please change the `.env` file to match you setup parameters:
+Please change the `docker/.env` file to match you setup parameters:
 
 | Parameter              | Description                                                     |
 | ---------------------- | --------------------------------------------------------------- |

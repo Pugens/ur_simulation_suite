@@ -1,8 +1,10 @@
 @echo off
 setlocal
 
-set "ROOT_DIR=%~dp0.."
+set "ROOT_DIR=%~dp0..\.."
 for %%I in ("%ROOT_DIR%") do set "ROOT_DIR=%%~fI"
+set "DOCKER_DIR=%~dp0.."
+for %%I in ("%DOCKER_DIR%") do set "DOCKER_DIR=%%~fI"
 
 set "URCAPS_DIR=%ROOT_DIR%\urcaps"
 set "URCAP_URL=https://github.com/UniversalRobots/Universal_Robots_ExternalControl_URCap/releases/download/v1.0.5/externalcontrol-1.0.5.urcap"
@@ -26,4 +28,4 @@ if errorlevel 1 (
     exit /b 1
 )
 
-docker compose -f "%ROOT_DIR%\docker-compose.yml" up --build -d
+docker compose -f "%DOCKER_DIR%\docker-compose.yml" up --build -d
