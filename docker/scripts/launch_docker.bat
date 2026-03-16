@@ -29,4 +29,4 @@ if errorlevel 1 (
 
 docker network inspect ursim_net >nul 2>&1 || docker network create --subnet=192.168.56.0/24 ursim_net
 
-docker run --rm -it --net ursim_net --ip 192.168.56.101 -e ROBOT_MODEL=UR16e -p 6080:6080 -p 29999:29999 -p 30001:30001 -p 30004:30004 -p 30002:30002 -p 50002:50002 -v "%URCAPS_DIR%:/urcaps" -v "%PROGRAMS_DIR%:/ursim/programs" universalrobots/ursim_e-series
+docker run --rm -it --net ursim_net --ip 192.168.56.101 -e ROBOT_MODEL=UR16 -p 6080:6080 -p 29999:29999 -p 30001:30001 -p 30004:30004 -p 30002:30002 -p 50002:50002 -v "%URCAPS_DIR%:/urcaps" -v "%PROGRAMS_DIR%:/ursim/programs" universalrobots/ursim_e-series
