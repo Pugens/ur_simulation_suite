@@ -42,15 +42,17 @@ end
 def move_j_vs_l():
   descriptionString = "MoveJ VS MoveL"
   speed_rads = 0.750
-  accel_radss = 3
+  accel_radss = 3  
+  ref_frame = p[0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000]
+  set_tcp(p[0.000000, 0.000000, 0.143000, 0.000000, 0.000000, 0.000000])
   while (returnBool):
     thrd = run popup_thread()
-    movej([-0.000000, -1.674961, -1.998559, -1.038862, 1.570796, -0.000000], accel_radss, speed_rads, 0, 0)
-    movej([0.249111, -1.865705, -1.747895, -2.743309, 0.249971, 1.653736], accel_radss, speed_rads, 0, 0.000)
-    movej([-0.000000, -1.674961, -1.998559, -1.038862, 1.570796, -0.000000], accel_radss, speed_rads, 0, 0.000)
+    movej([0.000000, -1.570796, -1.570796, -1.570796, 1.570796, -0.000000],accel_radss,speed_rads,0,0)
+    movej([0.541516, -1.819209, -1.677043, -2.786942, 0.541516, 1.570796],accel_radss,speed_rads,0,0)
+    movej([0.000000, -1.570796, -1.570796, -1.570796, 1.570796, -0.000000],accel_radss,speed_rads,0,0)
     sleep(2)
-    movel(pose_trans(ref_frame, p[0.479850, -0.174150, 0.357365, 1.190222, -1.204253, 1.226136]), accel_mss, speed_ms, 0, 0.000)
-    movel(pose_trans(ref_frame, p[0.479850, -0.174150, 0.357365, 2.221441, -2.221441, -0.000000]), accel_mss, speed_ms, 0, 0.000)
+    movel(pose_trans(ref_frame,p[0.479850, -0.174150, 0.399550, 1.209200, -1.209200, 1.209200]),accel_mss,speed_ms,0,0.001)
+    movel(pose_trans(ref_frame,p[0.479850, -0.174150, 0.399550, 2.221441, -2.221441, -0.000000]),accel_mss,speed_ms,0,0.001)
     sleep(2)
     kill thrd
   end
