@@ -1,1 +1,2 @@
-echo y | plink eugenio@TUD1006024 -pw easybot "{ echo "get serial number"; echo "get robot model"; echo "safetystatus"; echo "get operational mode"; echo "quit"; } | nc 127.0.0.1 29999"
+#!/bin/bash
+{ echo "get serial number"; echo "get robot model"; echo "safetystatus"; echo "get operational mode"; sleep 0.5; echo "quit"; } | nc localhost 29999
