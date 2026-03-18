@@ -39,11 +39,11 @@ The default method of installation suggests to use Docker, a more advanced softw
 <!-- omit from toc -->
 ###### How to use this documentation
 
-- The documentation here will not give you an introduction to robotics, but it will show you the minimum required to:
-  - Install the virtual robot controller (two methods proposed).
-  - Move and program the virtual robot from the virtual pendant.
-  - Move and program a virtual twin from RoboDK.
-  - Connect the virtual twin and virtual controller to test the RoboDK programs.
+The documentation here will not give you an introduction to robotics, but it will show you the minimum required to:
+- Install the virtual robot controller (two methods proposed).
+- Move and program the virtual robot from the virtual pendant.
+- Move and program a virtual twin from RoboDK.
+- Connect the virtual twin and virtual controller to test the RoboDK programs.
 
 ## Installation of the virtual robot controller
 
