@@ -32,9 +32,33 @@ def force_mode_v():
   returnBool = True
 end
 
+def force_mode_v_moving():
+  movej([-0.416443, -1.860853, -1.483469, -1.010490, 0.901377, -0.541984], accel_radss, speed_rads, 0, 0)
+  force_mode(p[0.479850, -0.481750, 0.522965, 0.0, 0.0, d2r(180)], [1, 0, 1, 0, 0, 0], [10, 0, 0, 0, 0, 0], 2, [.2, .1, .1, .785, .785, 1.57])
+  movel(pose_trans(get_actual_tcp_pose(),p[0,0,0.3,0,0,0]),a=0.1,v=0.05)
+  global returnVar = -1
+  returnBool = True
+end
+
 def force_mode_h():
   movej([-0.416443, -1.860853, -1.483469, -1.010490, 0.901377, -0.541984], accel_radss, speed_rads, 0, 0)
   force_mode(p[0.479850, -0.481750, 0.522965, 0.0, 0.0, d2r(180)], [1, 1, 0, 0, 0, 0], [10, 0, 0, 0, 0, 0], 2, [.2, .1, .1, .785, .785, 1.57])
+  global returnVar = -1
+  returnBool = True
+end
+
+def force_mode_h_moving():
+  movej([-0.416443, -1.860853, -1.483469, -1.010490, 0.901377, -0.541984], accel_radss, speed_rads, 0, 0)
+  force_mode(p[0.479850, -0.481750, 0.522965, 0.0, 0.0, d2r(180)], [1, 1, 0, 0, 0, 0], [10, 0, 0, 0, 0, 0], 2, [.2, .1, .1, .785, .785, 1.57])
+  movel(pose_trans(get_actual_tcp_pose(),p[0,0,0.3,0,0,0]),a=0.1,v=0.05)
+  global returnVar = -1
+  returnBool = True
+end
+
+def force_mode_h_test():
+  movej([-0.416443, -1.860853, -1.483469, -1.010490, 0.901377, -0.541984], accel_radss, speed_rads, 0, 0)
+  force_mode(p[0.479850, -0.481750, 0.522965, 0.0, 0.0, d2r(180)], [1, 1, 0, 0, 0, 0], [10, 0, 0, 0, 0, 0], 2, [.2, .1, .1, .785, .785, 1.57])
+  movel(pose_trans(get_actual_tcp_pose(),p[0.3,0,0,0,0,0]),a=0.1,v=0.05)
   global returnVar = -1
   returnBool = True
 end
@@ -207,10 +231,16 @@ while (True):
     force_mode_v()
   elif (8 == switch_1):
     force_mode_h()
+  elif (9 == switch_1):
+    force_mode_v_moving()
   elif (10 == switch_1):
+    force_mode_h_moving()
+  elif (11 == switch_1):
+    force_mode_h_test()
+  elif (20 == switch_1):
     move_home_v()
   else:
-    returnVar = request_integer_from_primary_client("Home_h:0 J_vs_L:1 W_sin:2 E_sin:3 S_sin:4 W_lock:5 Conf:6 forc_v:7 forc_h:8 Home_v:10")
+    returnVar = request_integer_from_primary_client("Home_h:0 J_vs_L:1 W_sin:2 E_sin:3 S_sin:4 W_lock:5 Conf:6 force_v:7 force_h:8 force_v_m:9 force_h_m:10 Home_v:20")
     # popup("<html>Wrist singularity=1<br>Elbow singularity=2<br>Pick up tool=3</html>", "Message", False, False, blocking = True)
     # my_variable = request_boolean_from_primary_client(“<html>Width: 20 inches Height: 10 inches Would you like to continue with these settings?<\html>”)
     # returnVar = request_float_from_primary_client(“description string”)
