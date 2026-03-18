@@ -1,7 +1,6 @@
 # ignore any file with these extensions:
 **.old**
 **.bak**
-**.urp**
 **.urcap**
 **.jar**
 **.UR**
