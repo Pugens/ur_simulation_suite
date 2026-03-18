@@ -51,8 +51,6 @@ The documentation here will not give you an introduction to robotics, but it wil
 
 Two different installation methods are provided, using virtual machines or Docker. Both can work on any host machine, whether it is macOS, Linux or Windows.
 
-> ⚠️ **Warning:** <br> Unfortunately, you will need an admin/root account access on your computer to make the docker installation work. So, in case you don't, please use the virtual machine installation method!
-
 ### Virtual machine method
 
 - **Download Virtualbox VM:**
