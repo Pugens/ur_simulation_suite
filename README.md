@@ -28,7 +28,9 @@
 
 Simulating a robot and performing off-line programming are crucial aspects to de-risk the success of your application. It allows you to test and validate your robot's behaviour in a virtual environment, reducing the time to debug and detect errors, which can take a long time on a real robot!
 
-This repository contains several tools and instructions on how to use Universal Robots (UR) offline simulator (ursim), a virtual controller replica of a real robot brain, capable of replicating the behaviour of a real robot one-to-one, with all features and programming capabilities of a real robot, minus the physical body of the arm!
+This repository contains several tools and instructions on how to use Universal Robots (UR) offline simulator (ursim), which is a virtual controller based on the same architecture and software installed on real UR robots, and RoboDK to make it easier to program the robot off-line.
+
+Plus, more features to simulate UR robots will be added in the future...
 
 <!-- omit from toc -->
 ###### Disclaimer
